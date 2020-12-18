@@ -10,6 +10,6 @@ RUN npm run build
 FROM nginx
 EXPOSE 3000
 #copy default conf file
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ./default.conf /etc/nginx/conf.d/default.conf
 #copy built files to nginx directory
 COPY --from=builder /app/build /usr/share/nginx/html
