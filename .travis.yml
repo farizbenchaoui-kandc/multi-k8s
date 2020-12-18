@@ -17,6 +17,7 @@ after_sucess:
  - docker build -t farizbenchaoui/multi-worker ./worker
 
  #log in to docker cli
+ 
  #add password to standard in, then do the login process saying expect password in stdin
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 #push images to docker hub
